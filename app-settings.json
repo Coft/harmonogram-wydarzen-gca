@@ -1,8 +1,0 @@
-{
-    "clientId": "1072558684084-21u915qa7mpjafh11fip3o2bmcvb0q3c.apps.googleusercontent.com",
-    "apiKey": "AIzaSyDy-MyKVjk0w8pAvpUlfokPqQ31DPKUHp4",
-    "calendarId" : "iu7j72oe5r1lnai2dgc6forljo@group.calendar.google.com",
-    "discoveryDocs":  ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
-    "moment-locale": "pl"
-    
-}
