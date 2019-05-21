@@ -1,6 +1,6 @@
 import moment from "moment";
 import settings from "../app-settings.json";
-import { number } from "prop-types";
+
 export enum EventTimelineType {
     Past,
     Present,

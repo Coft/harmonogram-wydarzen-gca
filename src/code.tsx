@@ -37,39 +37,52 @@ class App extends React.Component<{}, {data: PlannedEvent[]}>{
         return (
             <div>
                 {this.state.data
-                    .sort((pe1, pe2) => pe1.startDate > pe2.startDate ? 1 : -1)
+                    //.sort((pe1, pe2) => pe1.startDate > pe2.startDate ? 1 : -1)
                     .map(
                     (plannedEvent, i) => { 
                         let cardStyle = {
                             maxWidth: 540
                         }
-                        let cardClassName = "card mb-3";
-                        let cardBodyClassName = "card-body";
+                        
+                        let colorOption = "";
                         switch (plannedEvent.timelineType) {
                             case EventTimelineType.Past :
-                                cardClassName += " border-secondary";
-                                cardBodyClassName += " text-secondary";
+                                colorOption = "secondary";
                                 break;
-                                case EventTimelineType.Future:
-                                cardClassName += " border-primary";
-                                cardBodyClassName += " text-primary";
+                            case EventTimelineType.Present:
+                                colorOption += "warning";
                                 break;
-                        
+                            case EventTimelineType.Near :
+                                colorOption += "success";
+                                break;
+                            case EventTimelineType.Future:
+                                colorOption += "primary";
+                                break;
+                            default:
+                                colorOption = "light";
+                                break;
+
                         }
+
+                        let cardBodyClassName = `card-body text-${colorOption}`;
+                        let cardClassName = `card mb-3 border-${colorOption}`;
+
                         return <div className={cardClassName} style={cardStyle} key={i}>
                             <div className="row no-gutters">
                               <div className="col-md-4">
                                {plannedEvent.imagePath &&
-                                    <img src="..." className="card-img" alt="..."/>
+                                    <img src={plannedEvent.imagePath} className="card-img" alt="event image"/>
                                }
                               </div>
                               <div className="col-md-8">
                                 <div className={cardBodyClassName}>
                                   <h5 className="card-title">{plannedEvent.topic}</h5>
                                   <p className="card-text">{plannedEvent.startDateFormated}</p>
+                                  <p className="card-text">
+                                      <small className="text-muted">{plannedEvent.startDateHardFormated}</small>
+                                    </p>
+                                  <p className="card-text">{plannedEvent.description}</p>
                                   <p className="card-text">{plannedEvent.place}</p>
-                                  <p className="card-text">Description</p>
-                                  <p className="card-text"><small className="text-muted">Date ago or date to event</small></p>
                                 </div>
                               </div>
                             </div>

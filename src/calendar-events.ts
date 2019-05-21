@@ -54,7 +54,8 @@ export default class GoogleCalendarEvents {
                             event.end,
                             event.summary,
                             event.description,
-                            event.location
+                            event.location,
+                            "https://via.placeholder.com/150"
                         )
                     )
                 });
