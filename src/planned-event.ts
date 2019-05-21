@@ -52,12 +52,12 @@ export class PlannedEvent {
 
         this.timelineType = EventTimelineType.Present;
         
-        let dayDifference: number = moment().diff(this.startDate, 'days');
+        let dayDifference: number = this.startDate.diff(moment(), 'days');
 
-        if (dayDifference < 14) {
+        if (dayDifference > 14) {
             this.timelineType = EventTimelineType.Future;
         }
-        else if (dayDifference < 0) {
+        else if (dayDifference > 0) {
             this.timelineType = EventTimelineType.Near;
         }
         else if (dayDifference == 0) {
