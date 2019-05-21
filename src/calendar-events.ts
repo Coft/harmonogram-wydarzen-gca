@@ -1,6 +1,7 @@
 import {Subject} from "rxjs/Subject";
 import {PlannedEvent} from "./planned-event";
-import settings from "../gca-settings.json";
+import settings from "../app-settings.json";
+
 
 var gapiLoadSubject = new Subject();
 function handleClientLoad(gapi:any) {

@@ -4,7 +4,7 @@
 Application presents calendar events from public google calendars
 
 ## Setting file
-Plase create file named *gca-settings.json* in root directory for own configuration
+Plase create file named *app-settings.json* in root directory for own configuration
 ```json
 {
     "clientId": "*****.apps.googleusercontent.com",

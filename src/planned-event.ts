@@ -1,3 +1,6 @@
+import moment from "moment";
+import settings from "../app-settings.json";
+
 export enum EventTimelineType {
     Past,
     Present,
@@ -16,8 +19,8 @@ export class PlannedEvent {
 
 	constructor(startDate: Date, endDate: Date, topic: string, place: string, imagePath: string = "") {
         this.startDate = startDate;
-        this.startDateFormated = startDate.toString();
-        this.endDateFormated = endDate.toString();
+        this.startDateFormated = moment(startDate).locale(settings["moment-locale"]).calendar();
+        this.endDateFormated = moment(endDate).locale(settings["moment-locale"]).calendar();
         this.topic = topic;
         this.place = place;
         this.imagePath = imagePath;
