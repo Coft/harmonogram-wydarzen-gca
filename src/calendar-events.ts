@@ -11,8 +11,6 @@ function handleClientLoad(gapi:any) {
 (<any>window).handleClientLoad = handleClientLoad;
 
 export default class GoogleCalendarEvents {
-    [x: string]: any;
-
     gapi: any;
 
     events: Subject<PlannedEvent> = new Subject();
@@ -50,7 +48,14 @@ export default class GoogleCalendarEvents {
             if (evts!.length > 0) {
                 evts!.forEach((event: any) => {
                     this.events.next(
-                        new PlannedEvent(new Date(event.start.dateTime), new Date(event.end.dateTime), event.summary, event.location)
+                        new PlannedEvent(
+                            event.id,
+                            event.start,
+                            event.end,
+                            event.summary,
+                            event.description,
+                            event.location
+                        )
                     )
                 });
             }

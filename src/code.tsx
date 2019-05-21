@@ -39,7 +39,7 @@ class App extends React.Component<{}, {data: PlannedEvent[]}>{
                 {this.state.data
                     .sort((pe1, pe2) => pe1.startDate > pe2.startDate ? 1 : -1)
                     .map(
-                    (plannedEvent) => { 
+                    (plannedEvent, i) => { 
                         let cardStyle = {
                             maxWidth: 540
                         }
@@ -56,7 +56,7 @@ class App extends React.Component<{}, {data: PlannedEvent[]}>{
                                 break;
                         
                         }
-                        return <div className={cardClassName} style={cardStyle}>
+                        return <div className={cardClassName} style={cardStyle} key={i}>
                             <div className="row no-gutters">
                               <div className="col-md-4">
                                {plannedEvent.imagePath &&
