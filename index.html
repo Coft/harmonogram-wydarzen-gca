@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="node_modules/react/umd/react.development.js"></script>
+  <script src="node_modules/react-dom/umd/react-dom.development.js"></script>
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script>
+      module = {exports:{}}; exports = {};
+      window.require = function(name) { return window[name]; };
+      window['react'] = window.React;
+      window['react-dom'] = window.ReactDOM;
+      </script>
+    <title>Harmonogram</title>
+    <style>
+        body { font-family: 'Arial'; background: #ececec; }
+        ul { list-style-type: none; padding: 20px; }
+        li { padding: 20px; background: white; margin-bottom: 5px; }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script src="/bundle.js"></script>
+    <script src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){}; window.handleClientLoad(gapi)"
+        onreadystatechange="if (this.readyState === 'complete') this.onload()">
+    </script>
+</body>
+</html>

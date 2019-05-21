@@ -1,0 +1,31 @@
+{
+  "name": "harmonogram-wydarzen-gca",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --mode development"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coft/harmonogram-wydarzen-gca.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Coft/harmonogram-wydarzen-gca/issues"
+  },
+  "homepage": "https://github.com/Coft/harmonogram-wydarzen-gca#readme",
+  "dependencies": {
+    "@types/node": "^12.0.2",
+    "@types/react": "^16.8.17",
+    "@types/react-dom": "^16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rxjs": "^6.5.2",
+    "rxjs-compat": "^6.5.2",
+    "ts-loader": "^6.0.0",
+    "typescript": "^3.4.5"
+  }
+}
