@@ -61,3 +61,4 @@ typings/
 .next
 gca-settings.json
 dist/*
+app-settings.json

@@ -4,4 +4,5 @@
     "calendarId" : "iu7j72oe5r1lnai2dgc6forljo@group.calendar.google.com",
     "discoveryDocs":  ["https://www.googleapis.com/discovery/v1/apis/calendar/v3/rest"],
     "moment-locale": "pl"
+    
 }
