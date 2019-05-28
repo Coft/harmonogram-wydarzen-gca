@@ -11,7 +11,6 @@ class App extends React.Component<{}, {data: PlannedEvent[]}>{
 
     calendar: GoogleCalendarEvents;
 
-
     constructor(props: Readonly<{}>) {
         super(props);
         this.state = {data: []};

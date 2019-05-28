@@ -1,6 +1,7 @@
 import {Subject} from "rxjs/Subject";
 import {PlannedEvent} from "./planned-event";
 import settings from "../app-settings.json";
+import moment from "moment";
 
 
 var gapiLoadSubject = new Subject();
@@ -37,11 +38,11 @@ export default class GoogleCalendarEvents {
 
         this.gapi.client.calendar.events.list({
             calendarId: settings.calendarId,
-            //timeMin: (new Date()).toDateString(),
+            //timeMin: moment().subtract(3, 'months').toISOString(),
             showDeleted: false,
             orderBy: 'startTime',
             singleEvents: true,
-            maxResults: 20
+            maxResults: 40
         })
         .then((resp: { result: { items: any; }; }) => {
             var evts = resp.result.items;
